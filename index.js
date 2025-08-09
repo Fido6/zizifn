@@ -17,8 +17,8 @@ const ENCODED = {
 
 // Default user UUID, proxyIP, DNS Resolver, UI panel and websucket states.
 let userCode = "dd0cfef0-fda9-47ec-8a65-49d7bc004f82";
-let proxyIP = "turk.radicalization.ir";
-let dnsResolver = "1.1.1.1";
+let proxyIP = "cdn-all.xn--b6gac.eu.org";
+let dnsResolver = "94.140.15.15";
 const HTML_URL = "https://nirevil.github.io/zizifn/";
 const WS_READY_STATE_OPEN = 1;
 const WS_READY_STATE_CLOSING = 2;
@@ -415,7 +415,7 @@ async function getDianaConfig(currentUuid, hostName) {
     const baseUrl = `${protocol}://${currentUuid}@${hostName}:443`;
     const commonParams = `encryption=none&host=${hostName}&type=${networkType}&security=tls&sni=${hostName}`;
     const freedomConfig = `${baseUrl}?path=/api/v3&eh=Sec-WebSocket-Protocol&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
-    const dreamConfig = `${baseUrl}?path=%2FIndex%3Fed%3D2560&${commonParams}&fp=randomized&alpn=h2,http/1.1#${hostName}`;
+    const dreamConfig = `${baseUrl}?path=%2FIndex%3Fed%3D2560&${commonParams}&fp=randomized&alpn=h3#${hostName}`;
     const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(`https://revil-sub.pages.dev/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=true`)}`;
     const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
     
